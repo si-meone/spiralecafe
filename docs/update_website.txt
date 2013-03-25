@@ -1,0 +1,14 @@
+c:\
+cd "\Program Files\Google\google_appengine\
+
+upload update version number in yaml and after upload set version to live one
+python appcfg.py update "d:\dev\AppEngine\src\spiralecafe"
+email = administrator@spirale.co.uk
+
+if that fails
+python appcfg.py --no_cookies --email=administrator@spirale.co.uk update 
+
+"d:\dev\AppEngine\src\spiralecafe"
+
+sandbox 
+python dev_appserver.py "d:\dev\AppEngine\src\spiralecafe"

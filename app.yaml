@@ -1,0 +1,22 @@
+application: spiraleinternet-hrd
+version: 4
+runtime: python27
+api_version: 1
+threadsafe: no
+
+builtins:
+#- datastore_admin: on
+
+handlers:
+- url: /stylesheets
+  static_dir: stylesheets
+
+- url: /images
+  static_dir: images
+
+- url: .*
+  script: myapp.py
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
