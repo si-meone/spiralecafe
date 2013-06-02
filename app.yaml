@@ -14,6 +14,9 @@ handlers:
 - url: /images
   static_dir: images
 
+- url: /dsi
+  static_dir: dsi
+
 - url: .*
   script: myapp.py
 
