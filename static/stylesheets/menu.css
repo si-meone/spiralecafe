@@ -1,0 +1,26 @@
+#col1 {
+	float: left;
+	width: 50%;
+}
+#col2 {
+	float: right;
+	width: 50%
+	margin-left: 50px;
+}
+
+
+
+table {
+  border-collapse: collapse;	
+  border-spacing: 0;
+  margin: 5px;
+}
+caption{
+  margin-top: 10px;
+	font-weight: bold;
+	}
+
+table, td {
+  border: dotted black 1px;
+  padding: 5px
+}

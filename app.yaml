@@ -1,25 +1,46 @@
 application: spiraleinternet-hrd
-version: 4
+version: 5
 runtime: python27
 api_version: 1
-threadsafe: no
-
-builtins:
-#- datastore_admin: on
+threadsafe: true
 
 handlers:
+
+
+
+#- url: /
+#  static_files: static/index.html
+#  upload: (.*)
+
+- url: /scripts/hi
+  script: scripts.hello.application
+
+- url: /scripts/(.*)
+  script: scripts.\1.application
+
+- url: /html
+  static_dir: static/html
+
 - url: /stylesheets
-  static_dir: stylesheets
+  static_dir: static/stylesheets
 
 - url: /images
-  static_dir: images
+  static_dir: static/images
 
-- url: /dsi
-  static_dir: dsi
+- url: /
+  static_files: static/html/index.html
+  upload: index.html
 
-- url: .*
-  script: myapp.py
-
+# regex
+## access the static resources in the root director
+#
+#- url: /(.*)
+#  static_files: \1
+#  upload: (.*)
+#
+#Libraries!
 libraries:
 - name: webapp2
-  version: "2.5.2"
+  version: "2.5.1"
+- name: jinja2
+  version: latest
