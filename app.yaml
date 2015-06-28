@@ -1,5 +1,5 @@
 application: spiraleinternet-hrd
-version: 6
+version: 10
 runtime: python27
 api_version: 1
 threadsafe: true
@@ -9,7 +9,7 @@ handlers:
 
 
 #- url: /
-#  static_files: static/index.html
+#  static_files: static/index2.html
 #  upload: (.*)
 
 - url: /scripts/hi
@@ -21,8 +21,14 @@ handlers:
 - url: /html
   static_dir: static/html
 
-- url: /stylesheets
-  static_dir: static/stylesheets
+- url: /css
+  static_dir: static/css
+
+- url: /less
+  static_dir: static/less
+
+- url: /js
+  static_dir: static/js
 
 - url: /images
   static_dir: static/images
